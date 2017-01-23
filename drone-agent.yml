@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  drone-agent:
+    image: drone/drone:0.5
+    command: agent
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
